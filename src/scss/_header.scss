@@ -1,0 +1,15 @@
+@import 'variables';
+
+#header {
+  /* add some text here */
+}
+
+#quizHeader {
+  background-color: $primaryBackground;
+}
+
+#quizHeader h1 {
+  padding: 1.5rem 0rem;
+  margin: 0;
+  font-size: 2rem;
+}

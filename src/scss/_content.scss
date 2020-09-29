@@ -1,0 +1,29 @@
+@import 'variables';
+
+#content .tasks .btn {
+  width: 100%;
+}
+
+#qsContainer .infoText {
+  margin: 1rem 0rem;
+  color: red;
+  font-weight: bold;
+}
+
+#qsContainer .card {
+  margin: 1rem auto;
+  max-width: 600px;
+}
+
+#qsContainer .card .list-group {
+  text-align: left;
+}
+
+#qsContainer .correctAnswer {
+  background-color: lightgreen;
+  font-weight: bold;
+}
+
+#qsContainer .category-card {
+  background-color: $primaryBackground;
+}

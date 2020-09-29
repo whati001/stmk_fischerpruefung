@@ -18,7 +18,8 @@
     "watch:html": "onchange \"src/views\" -- yarn run build:html",
     "watch:images": "onchange \"src/images\" -- yarn run build:images",
     "watch:js": "onchange \"src/js\" -- webpack --mode=development",
-    "watch": "run-p serve watch:*"
+    "watch": "run-p serve watch:*",
+    "dev": "yarn run build && yarn run watch"
   },
   "repository": {
     "type": "git",

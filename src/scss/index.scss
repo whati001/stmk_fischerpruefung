@@ -1,7 +1,9 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'variables';
-
+@import 'content';
+@import 'footer';
+@import 'header';
 
 body {
-  color: $primary;
+  color: $primaryText;
 }
