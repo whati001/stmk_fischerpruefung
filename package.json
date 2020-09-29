@@ -4,19 +4,21 @@
   "description": "Stmk Fischerpruefung Online-Fragenkatalog",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "css:scss": "node-sass --output-style compressed -o dist src/scss",
+    "clean": "rimraf dist/*",
     "css:autoprefixer": "postcss -u autoprefixer -r dist/*.css",
-    "css:lint": "stylelint src/scss/*.scss --syntax scss || true",
+    "css:scss": "node-sass --output-style compressed -o dist src/scss",
+    "css:lint": "stylelint src/scss/*.scss --syntax scss",
     "build:css": "yarn run css:lint && yarn run css:scss && yarn run css:autoprefixer",
-    "build:images": "imagemin src/images/**/* --out-dir=dist/images",
     "build:js": "webpack --mode=production",
-    "watch:css": "onchange \"src/scss\" -- npm run build:css",
-    "watch:images": "onchange \"src/images\" -- npm run build:images",
-    "watch:js": "onchange \"src/js\" -- webpack --mode=development",
+    "build:html": "posthtml -c posthtml.json",
+    "build:images": "imagemin src/images/**/* --out-dir=dist/images",
+    "build": "run-s build:*",
     "serve": "browser-sync start --server \"dist\" --files \"dist\"",
-    "watch": "run-p serve watch:*",
-    "build": "run-p build:*"
+    "watch:css": "onchange \"src/scss\" -- yarn run build:css",
+    "watch:html": "onchange \"src/views\" -- yarn run build:html",
+    "watch:images": "onchange \"src/images\" -- yarn run build:images",
+    "watch:js": "onchange \"src/js\" -- webpack --mode=development",
+    "watch": "run-p serve watch:*"
   },
   "repository": {
     "type": "git",
@@ -32,7 +34,8 @@
     "autoprefixer": "^10.0.1",
     "node-sass": "^4.14.1",
     "postcss": "^8.1.1",
-    "postcss-cli": "^8.0.0"
+    "postcss-cli": "^8.0.0",
+    "rimraf": "^3.0.2"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.11.5",
@@ -40,9 +43,13 @@
     "browser-sync": "^2.26.12",
     "eslint": "^7.10.0",
     "eslint-loader": "^4.0.2",
+    "htmlnano": "^0.2.6",
     "imagemin-cli": "^6.0.0",
     "npm-run-all": "^4.1.5",
     "onchange": "^7.0.2",
+    "posthtml": "^0.13.3",
+    "posthtml-cli": "^0.7.6",
+    "posthtml-modules": "^0.6.2",
     "stylelint": "^13.7.2",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"
