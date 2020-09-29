@@ -1,0 +1,50 @@
+{
+  "name": "stmk_fischerpruefung",
+  "version": "1.0.0",
+  "description": "Stmk Fischerpruefung Online-Fragenkatalog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css:scss": "node-sass --output-style compressed -o dist src/scss",
+    "css:autoprefixer": "postcss -u autoprefixer -r dist/*.css",
+    "css:lint": "stylelint src/scss/*.scss --syntax scss || true",
+    "build:css": "yarn run css:lint && yarn run css:scss && yarn run css:autoprefixer",
+    "build:images": "imagemin src/images/**/* --out-dir=dist/images",
+    "build:js": "webpack --mode=production",
+    "watch:css": "onchange \"src/scss\" -- npm run build:css",
+    "watch:images": "onchange \"src/images\" -- npm run build:images",
+    "watch:js": "onchange \"src/js\" -- webpack --mode=development",
+    "serve": "browser-sync start --server \"dist\" --files \"dist\"",
+    "watch": "run-p serve watch:*",
+    "build": "run-p build:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whati001/stmk_fischerpruefung.git"
+  },
+  "author": "whati001",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/whati001/stmk_fischerpruefung/issues"
+  },
+  "homepage": "https://github.com/whati001/stmk_fischerpruefung#readme",
+  "dependencies": {
+    "autoprefixer": "^10.0.1",
+    "node-sass": "^4.14.1",
+    "postcss": "^8.1.1",
+    "postcss-cli": "^8.0.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.11.5",
+    "babel-loader": "^8.1.0",
+    "browser-sync": "^2.26.12",
+    "eslint": "^7.10.0",
+    "eslint-loader": "^4.0.2",
+    "imagemin-cli": "^6.0.0",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.0.2",
+    "stylelint": "^13.7.2",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  }
+}
