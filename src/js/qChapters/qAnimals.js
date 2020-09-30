@@ -10,7 +10,7 @@ export default {
         b: 'auf der Fischerkarte und in der Verordnung des Landes Steiermark ersichtlich und können durch die zuständige Bezirksverwaltungsbehörde nach Bedarf abgeändert werden.',
         c: 'sind ausschließlich in Gewässern anzuwenden, in denen Staatsbetriebe das Fischereirecht besitzen oder in Pacht haben.'
       },
-      c: 'a'
+      c: 'b'
     },
     {
       id: 2,
