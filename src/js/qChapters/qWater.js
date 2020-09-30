@@ -103,13 +103,13 @@ export default {
       c: 'a'
     }, {
       id: 12,
-      q: 'KEINE AHNUNG: Je höher die Wassertemperatur ist, desto weniger Sauerstoff kann potentiell darin gelöst werden. Bei welcher Temperatur ist erwartungsgemäß der Sauerstoffgehalt im Wasser am höchsten?',
+      q: 'Je höher die Wassertemperatur ist, desto weniger Sauerstoff kann potentiell darin gelöst werden. Bei welcher Temperatur ist erwartungsgemäß der Sauerstoffgehalt im Wasser am höchsten?',
       a: {
         a: '24°C',
         b: '12°C',
         c: '4°C'
       },
-      c: 'a'
+      c: 'c'
     }, {
       id: 13,
       q: 'Gewässerverunreinigungen stellen die Fauna eines Gewässers immer wieder auf eine harte Beweisprobe. Welche der folgenden Fischarten sind am empfindlichsten auf Gewässerverunreinigungen?',
