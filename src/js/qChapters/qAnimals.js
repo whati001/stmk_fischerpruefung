@@ -363,7 +363,7 @@ export default {
         b: 'Ein Watkescher ist notwendiger Ausrüstungsgegenstand für das Keschern von Fischnährtieren.',
         c: 'Ein Watkescher besitzt einen kurzen Stiel, um watend Fische landen zu können, zum Beispiel beim Fliegenfischen.'
       },
-      c: 'a'
+      c: 'c'
     },
     {
       id: 38,
