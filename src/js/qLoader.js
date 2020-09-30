@@ -20,6 +20,20 @@ class QLoader {
     return;
   }
 
+  shuffelQs() {
+    this.qs = this.qs.map(cat => {
+      cat.qs = utils.shuffleArray(cat.qs);
+      return cat;
+    });
+  }
+
+  sliceQs(size) {
+    this.qs = this.qs.map(cat => {
+      cat.qs = cat.qs.slice(0, size);
+      return cat;
+    });
+  }
+
   injectMissingQsInfo(domContainer) {
     console.warn('Please define some questions in questions.js');
     const { col } = utils.injectNewRowCol(domContainer, { 'col': 'infoText' });
@@ -59,9 +73,9 @@ class QLoader {
       answers.appendChild(answerLi);
       const answerDiv = utils.newDOMElement('div', 'form-check');
       answerLi.appendChild(answerDiv);
-      const checkbox = utils.newDOMElement('input', 'form-check-input', { 'type': 'radio', 'name': `${cat.id}-${q.id}`, 'value': akey, 'id': akey });
+      const checkbox = utils.newDOMElement('input', 'form-check-input', { 'type': 'radio', 'name': `${cat.id}-${q.id}`, 'value': akey, 'id': `${cat.id}-${q.id}-${akey}` });
       answerDiv.appendChild(checkbox);
-      const label = utils.newDOMElement('label', 'form-check-label', { 'innerText': q.a[akey], 'for': akey });
+      const label = utils.newDOMElement('label', 'form-check-label', { 'innerText': q.a[akey], 'for': `${cat.id}-${q.id}-${akey}` });
       answerDiv.appendChild(label);
       if (readOnly) checkbox.disabled = true;
     });

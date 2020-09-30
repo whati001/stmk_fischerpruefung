@@ -1,5 +1,5 @@
 import fishing from './qChapters/qFishing';
-import watter from './qChapters/qWatter';
+import watter from './qChapters/qWater';
 import animal from './qChapters/qAnimals';
 import law from './qChapters/qLaw';
 

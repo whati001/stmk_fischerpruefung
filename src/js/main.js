@@ -13,15 +13,26 @@ window.onload = function() {
   const qLoader = new QLoader(qs);
   switch (action) {
     case 'train':
+      qLoader.shuffelQs();
       qLoader.injectAllQuestions('qsContainer', false);
 
       // TODO: better solution, but I am running out of time
+      document.getElementById('quizType').innerText = 'Training';
       document.getElementById('validateInput').onclick = validateUserInput;
       break;
     case 'exam':
+      qLoader.shuffelQs();
+      qLoader.sliceQs(10);
+      qLoader.injectAllQuestions('qsContainer', false);
+
+      // TODO: better solution, but I am running out of time
+      document.getElementById('quizType').innerText = 'Pruefung';
+      document.getElementById('validateInput').onclick = validateUserInput;
       break;
     case 'show': {
       qLoader.injectAllQuestions('qsContainer');
+      document.getElementById('quizType').innerText = 'Fragen';
+      document.getElementById('validateInput').style.display = 'none';
       break;
     }
     default: {
@@ -53,7 +64,7 @@ const validateUserInput = () => {
 
     const userSelected = uq.querySelector('input:checked');
     if (userSelected) {
-      if(userSelected.getAttribute('value') !== correct) {
+      if (userSelected.getAttribute('value') !== correct) {
         utils.getParentNode(userSelected, 'li').classList.add('wrongAnswer');
       }
     }
