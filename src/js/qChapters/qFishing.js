@@ -323,10 +323,10 @@ export default {
       q: 'Welche der folgenden Aussagen ist richtig?',
       a: {
         a: 'Rotfedern und Rotaugen können durch die rote Iris voneinander unterschieden werden.',
-        b: 'Die einzige verlässliche Methode zur Unterscheidung von Rotaugen und Rotfedern ist die nach hinten versetzte Rücken?osse von Rotfedern.',
+        b: 'Die einzige verlässliche Methode zur Unterscheidung von Rotaugen und Rotfedern ist die nach hinten versetzte Rückenflosse von Rotfedern.',
         c: 'Rotfedern und Rotaugen können anhand der roten Flossen der Rotfedern voneinander unterschieden werden.'
       },
-      c: 'a'
+      c: 'b'
     }, {
       id: 32,
       q: 'Kreuzen Sie die richtige Aussage an!',
