@@ -13,3 +13,11 @@
   margin: 0;
   font-size: 2rem;
 }
+
+#quizHeader img {
+  display: block;
+  margin: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
