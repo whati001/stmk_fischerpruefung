@@ -178,7 +178,7 @@ export default {
       q: 'Was bedeutet der WRRL und welche Ziele sind darin angeführt?',
       a: {
         a: 'Die Wasserrahmenrichtlinie reglementiert die Fangquoten in der Binnenfischerei in Österreich.',
-        b: 'Die Wasserrahmenrichtlinie reglementiert den Import und Export von Aquakulturprodukten in der Eur0päischen Union.',
+        b: 'Die Wasserrahmenrichtlinie reglementiert den Import und Export von Aquakulturprodukten in der Europäischen Union.',
         c: 'Darunterversteht man die Europäische Wasserrahmenrichtline, die zum Ziel hat, alle Gewässer der Europäischen Union in einen zumindest guten ökologischen sowie guten chemischen Zustand zu bringen.'
       },
       c: 'c'
@@ -199,7 +199,7 @@ export default {
         b: 'Schwarzerle, Huchen, Wasserspitzmaus',
         c: 'Drüsiges Springkraut, Sonnenbarsch, Signalkrebs'
       },
-      c: 'v'
+      c: 'c'
     }, {
       id: 23,
       q: 'Der Japanische Staudenknöterich ist',

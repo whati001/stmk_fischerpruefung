@@ -43,7 +43,7 @@ export default {
   }
     , {
     id: 5,
-    q: 'Unter welcher Voraussetzung dürfen Minderjährige unter 14 Jahren ?schen?',
+    q: 'Unter welcher Voraussetzung dürfen Minderjährige unter 14 Jahren fischen?',
     a: {
       a: 'Sie fischen nur in der Äschenregion.',
       b: 'Sie fischen nur in der Forellenregion.',
@@ -366,7 +366,7 @@ export default {
     a: {
       a: 'Wenn möglichst viele Fische in möglichst kurzer Zeit gefangen werden.',
       b: 'Wenn sie den fischereikundlichen Erkenntnissen entspricht und unter Verwendung geeigneter Fanggeräte, Fangvorrichtungen und Fangmittel ausgeübt wird.',
-      c: 'Wenn ein Gewässer ?ächendeckend abgefischt und dann neu besetzt wird.'
+      c: 'Wenn ein Gewässer flächendeckend abgefischt und dann neu besetzt wird.'
     },
     c: 'b'
   }]

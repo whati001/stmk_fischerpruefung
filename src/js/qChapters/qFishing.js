@@ -539,7 +539,7 @@ export default {
       q: 'KEINE AHNUNG: Welche der folgenden Aussagen ist falsch?',
       a: {
         a: 'Neunaugen sind der Ordnung der Rundmäuler zuzuordnen.',
-        b: 'Bachflohkrebse stellen eine wichtige Nahrungsquelle für Klein?scharten dar.',
+        b: 'Bachflohkrebse stellen eine wichtige Nahrungsquelle für Kleinfischarten dar.',
         c: 'Ein Kormoran frisst bis zu 5 kg Fisch am Tag.'
       },
       c: 'b'

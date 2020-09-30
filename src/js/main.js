@@ -53,20 +53,15 @@ const validateUserInput = () => {
     const ids = uq.querySelector('input').getAttribute('name');
     const catId = parseInt(ids.split('-')[0]);
     const qId = parseInt(ids.split('-')[1]);
-    console.log(ids);
-    console.log(catId);
-    console.log(qId);
-    console.log(qs.filter(cat => cat.id === catId));
-
     const correct = qs.filter(cat => cat.id === catId)[0].qs.filter(q => q.id === qId)[0].c;
-    console.log(correct);
-    console.log(uq);
 
     const userSelected = uq.querySelector('input:checked');
     if (userSelected) {
       if (userSelected.getAttribute('value') !== correct) {
         utils.getParentNode(userSelected, 'li').classList.add('wrongAnswer');
       }
+    } else {
+      uq.style.color = 'red';
     }
     const correctInput = uq.querySelector(`input[value=${correct}`);
     correctInput.checked = true;
