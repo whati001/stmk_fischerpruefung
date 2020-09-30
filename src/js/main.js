@@ -64,7 +64,7 @@ const validateUserInput = () => {
       uq.style.color = 'red';
     }
     const correctInput = uq.querySelector(`input[value=${correct}`);
-    correctInput.checked = true;
+    //correctInput.checked = true;
     utils.getParentNode(correctInput, 'li').classList.add('correctAnswer');
   });
 };
