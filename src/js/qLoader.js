@@ -1,4 +1,5 @@
 import utils from './utils';
+
 /**
  * QLoader - Question Loader
  * Load and process everything related to questions
@@ -38,7 +39,7 @@ class QLoader {
     return card;
   }
 
-  injectQCard(domContainer, q, readOnly = false) {
+  injectQCard(domContainer, q, cat, readOnly = false) {
     const card = utils.newDOMElement('div', 'card category-question-card');
     domContainer.appendChild(card);
     if (q.img) {
@@ -58,7 +59,7 @@ class QLoader {
       answers.appendChild(answerLi);
       const answerDiv = utils.newDOMElement('div', 'form-check');
       answerLi.appendChild(answerDiv);
-      const checkbox = utils.newDOMElement('input', 'form-check-input', { 'type': 'radio', 'name': q.id, 'value': akey, 'id': akey });
+      const checkbox = utils.newDOMElement('input', 'form-check-input', { 'type': 'radio', 'name': `${cat.id}-${q.id}`, 'value': akey, 'id': akey });
       answerDiv.appendChild(checkbox);
       const label = utils.newDOMElement('label', 'form-check-label', { 'innerText': q.a[akey], 'for': akey });
       answerDiv.appendChild(label);
@@ -94,8 +95,8 @@ class QLoader {
       cat.qs.forEach(q => {
         const row = utils.injectNewRow(domContainer);
         const col = utils.injectNewCol(row);
-        const card = this.injectQCard(col, q, readOnly);
-        this.markCorrectAnswer(card, q);
+        const card = this.injectQCard(col, q, cat, readOnly);
+        if (readOnly) this.markCorrectAnswer(card, q);
       });
     });
   }

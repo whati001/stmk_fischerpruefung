@@ -24,6 +24,11 @@
   font-weight: bold;
 }
 
+#qsContainer .wrongAnswer {
+  background-color: lightcoral;
+}
+
+
 #qsContainer .category-card {
   background-color: $primaryBackground;
 }
