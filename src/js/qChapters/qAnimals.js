@@ -327,13 +327,13 @@ export default {
     },
     {
       id: 34,
-      q: 'KEINE AHNUNG:Sie wollen mit einer Fliegenrute und einer Nymphe auf Äschenfang gehen. Welche Überlegungen müssen Sie hinsichtlich der verwendeten Angelschnur anstellen?',
+      q: 'Sie wollen mit einer Fliegenrute und einer Nymphe auf Äschenfang gehen. Welche Überlegungen müssen Sie hinsichtlich der verwendeten Angelschnur anstellen?',
       a: {
-        a: 'Ich benötige aufjeden Fall eine orange Fliegenschnur, um diese besser zu sehen.',
+        a: 'Ich benötige auf jeden Fall eine orange Fliegenschnur, um diese besser zu sehen.',
         b: 'Die verwendete Angelschnur muss unbedingt einen Durchmesser von 0,25 mm haben.',
-        c: 'Da Nymphen nicht auf der Wasseroberfiäche treiben, muss ich eine sinkende Angelschhur für das Fliegenfischen verwenden.'
+        c: 'Da Nymphen nicht auf der Wasseroberfläche treiben, muss ich eine sinkende Angelschnur für das Fliegenfischen verwenden.'
       },
-      c: 'b'
+      c: 'c'
     },
     {
       id: 35,
