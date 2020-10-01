@@ -79,7 +79,7 @@ export default {
       b: 'Wenn nur vom Ufer aus gefischt wird.',
       c: 'Wenn das Gewässer eine Wasserfläche von mindestens 0,5 ha besitzt.'
     },
-    c: 'b'
+    c: 'a'
   }
     , {
     id: 9,
