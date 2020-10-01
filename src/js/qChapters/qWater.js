@@ -73,7 +73,7 @@ export default {
         b: 'Wenn die Wasserqualität als sehr gut einzustufen ist, dann kann kein Unterschied zwischen begradigten und mäandrierenden Gewässern in Betracht auf die Artenfauna festgestellt werden.',
         c: 'In einem natürlich mäandrierenden Gewässer sind im Gegensatz zu einem begradigten Gewässer tendenziell mehr Fisch- und Tierarten anzutreffen.'
       },
-      c: 'b'
+      c: 'c'
     }, {
       id: 9,
       q: 'Welche der folgenden Reihenfolgen ist korrekt?',
