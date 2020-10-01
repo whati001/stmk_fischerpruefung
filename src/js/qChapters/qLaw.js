@@ -106,7 +106,7 @@ export default {
     q: 'Können bereits erteilte Fischerkarten oder Scheine wieder eingezogen werden?',
     a: {
       a: 'Ja, wenn der Fischerkarteninhaber gegen Fischereiliche Schutzbestimmungen verstoßen hat.',
-      b: 'Nein, selbst wenn der Fischerkarteninhaber gegen ?schereiliche Schutzbestimmungen verstoßen hat.',
+      b: 'Nein, selbst wenn der Fischerkarteninhaber gegen fischereiliche Schutzbestimmungen verstoßen hat.',
       c: 'Nein, auf keinen Fall.'
     },
     c: 'a'
@@ -354,9 +354,9 @@ export default {
     id: 36,
     q: 'Welche Vorgaben gibt es in Bezug auf die Schonzeiten?',
     a: {
-      a: 'Innerhalb der Schonzeit dürfen geschonte Wassertiere weder gezielt be?scht, noch entnommen werden.',
+      a: 'Innerhalb der Schonzeit dürfen geschonte Wassertiere weder gezielt befischt, noch entnommen werden.',
       b: 'Innerhalb der Schonzeit darf gar nicht gefischt werden.',
-      c: 'Innerhalb der Schonzeit darf eine Fischart zwar gezielt be?scht, jedoch nicht entnommen werden.'
+      c: 'Innerhalb der Schonzeit darf eine Fischart zwar gezielt befischt, jedoch nicht entnommen werden.'
     },
     c: 'a'
   }
