@@ -4,7 +4,7 @@ export default {
   qs: [
     {
       id: 1,
-      q: 'Die durch Verordnung festgelegten Mindestfanglängen und Schonzeiten laut dem Steirischen Fischereigesetz 2000 sind',
+      q: 'Die durch die Verordnung festgelegten Mindestfanglängen und Schonzeiten laut dem Steirischen Fischereigesetz 2000 sind',
       a: {
         a: 'bei der Steiermärkischen Landesregierung auf Anfrage erhältlich und können durch den Fischereiberechtigten beliebig geändert werden.',
         b: 'auf der Fischerkarte und in der Verordnung des Landes Steiermark ersichtlich und können durch die zuständige Bezirksverwaltungsbehörde nach Bedarf abgeändert werden.',
@@ -27,7 +27,7 @@ export default {
       q: 'Welche Ziele sollen durch die Verordnung von Mindestfanglängen und Schonzeiten erfüllt werden?',
       a: {
         a: 'Die Einführung dieser Beschränkungen dient dazu, den Fischbestand in dieser Zeit ohne fischereiliche Einflüsse wissenschaftlich zu erheben.',
-        b: 'Mindestfanglängen und Schonzeiten sollen den einzelnen Fischarten ein Zeitfenster zur Verfügung stellen, in dem sich geschlechtsreife Fische auf natürliche Weise fortpfianzen können, um den Fortbestand der Art zu sichern.',
+        b: 'Mindestfanglängen und Schonzeiten sollen den einzelnen Fischarten ein Zeitfenster zur Verfügung stellen, in dem sich geschlechtsreife Fische auf natürliche Weise fortpflanzen können, um den Fortbestand der Art zu sichern.',
         c: 'Durch die Umsetzung der Verordnung über Mindestfanglängen und Schonzeiten wird gewährleistet, dass der Fischereirechtsbesitzer genug laichfähige Fische für seinen Eigenbedarf entnehmen kann.'
       },
       c: 'b'
@@ -46,14 +46,14 @@ export default {
       id: 5,
       q: 'Wie verhalten Sie sich beim zufälligen Fang eines untermaßigen und aktuell geschonten Wassertieres?',
       a: {
-        a: 'Nach dem Brill entnehme ich den Fisch, um ihn zur Erholung einige Stunden im Setzkescher zu hältern.',
-        b: 'Untermaßige und geschonte Wasser?ere sind aufjeden Fall dem Fischereiberech?gten unverzüglich auszuhändigen.',
+        a: 'Nach dem Drill entnehme ich den Fisch, um ihn zur Erholung einige Stunden im Setzkescher zu hältern.',
+        b: 'Untermaßige und geschonte Wassertiere sind auf jeden Fall dem Fischereiberechtigten unverzüglich auszuhändigen.',
         c: 'Ich drille den Fisch möglichst schonend und versuche, ihn noch im Wasser abzuhaken.'
       },
       c: 'c'
     }, {
       id: 6,
-      q: 'Fischereillcher Abfall wie abgerissene Schnüre, Bleie und dergleichen werden',
+      q: 'Fischereilicher Abfall wie abgerissene Schnüre, Bleie und dergleichen werden',
       a: {
         a: 'an den Fischereiberechtigten zum Recycling übergeben.',
         b: 'vom jeweiligen Verursacher gesammelt und fachgerecht entsorgt.',
@@ -65,8 +65,8 @@ export default {
       id: 7,
       q: 'Sie fangen einen Fisch, den Sie nicht verzehren wollen. Dieser Fisch ist aktuell nicht geschont und größer als das Mindestmaß. Wie gehen Sie vor?',
       a: {
-        a: 'Ich muss den Fisch entnehmen, da er größer als die Mindestfanglänge ist und nicht geschont Ist.',
-        b: 'Der Fisch muss zur Verwertung entnommen werden und dem Fischereiberechtigtcn ausgehändigt werden.',
+        a: 'Ich muss den Fisch entnehmen, da er größer als die Mindestfanglänge ist und nicht geschont ist.',
+        b: 'Der Fisch muss zur Verwertung entnommen werden und dem Fischereiberechtigten ausgehändigt werden.',
         c: 'Ich lande den Fisch vorsichtig mit dem Unterfangnetz, löse den Haken vorsichtig und setze ihn danach schonend ins Wasser zurück.',
       },
       c: 'c'
@@ -85,8 +85,8 @@ export default {
       id: 9,
       q: 'Der Begriff „Aktion“ beschreibt im Sinne der Fischerei folgende Thematik:',
       a: {
-        a: 'Die Elastizität und Biegung der Rute im Brill.',
-        b: 'Das Verhalten des Flsches während des Drills.',
+        a: 'Die Elastizität und Biegung der Rute im Drill.',
+        b: 'Das Verhalten des Fisches während des Drills.',
         c: 'Das Verhalten des Fischen während des Drills.',
       },
       c: 'a'
@@ -123,11 +123,11 @@ export default {
     },
     {
       id: 13,
-      q: 'Mit welchen der folgenden Montagen wird auf schwere Raubfische gefischt? ',
+      q: 'Mit welchen der folgenden Montagen wird auf schwere Raubfische gefischt?',
       a: {
         a: 'Fliegenrute der Klasse 2 mit einem monofilen Vorfach und einer Nymphe.',
         b: 'Matchrute mit Pose und Made als Köder.',
-        c: 'Spinn - oder Grundruten mit gefloochtener Schnur und Stahlvorfach.',
+        c: 'Spinn - oder Grundruten mit geflochtener Schnur und Stahlvorfach.',
       },
       c: 'c'
     },
@@ -135,7 +135,7 @@ export default {
       id: 14,
       q: 'Welche der folgenden Aussagen ist falsch?',
       a: {
-        a: 'Ein Schonhaken besitzt immer ein Öhr zur Befestigung an der Angelschnur bzw.dem Vorfach.',
+        a: 'Ein Schonhaken besitzt immer ein Öhr zur Befestigung an der Angelschnur bzw. dem Vorfach.',
         b: 'Ein Schonhaken besitzt keinen Widerhaken und ist somit besonders fischschonend.',
         c: 'Ein Drilling ist ein Dreifachhaken, der meist bei Kunstködern für das Spinnfischen Verwendung findet.',
       },
@@ -143,7 +143,7 @@ export default {
     },
     {
       id: 15,
-      q: 'KEINE AHNUNG: Welche der folgenden Montagen wird für das Fliegenfischen auf Äschen verwendet ? ',
+      q: 'Welche der folgenden Montagen wird für das Fliegenfischen auf Äschen verwendet?',
       a: {
         a: 'Fliegenrute der Klasse 8 mit einem großen Streamer von mindestens 8 Zentimeter Länge.',
         b: 'Stipprute mit Kunstfliegenköder.',
@@ -171,7 +171,7 @@ export default {
       c: 'a'
     }, {
       id: 18,
-      q: 'Welche der folgenden Aussagen ist richtig ? ',
+      q: 'Welche der folgenden Aussagen ist richtig?',
       a: {
         a: 'Der Drill ist das gezielte Füttern der Fische zur gleichen Tageszeit.',
         b: 'Der Drill ist der Zeitraum zwischen Anhieb und Landung des Fisches und soll nicht unnötig in die Länge gezogen werden.',
@@ -180,7 +180,7 @@ export default {
       c: 'b'
     }, {
       id: 19,
-      q: 'Welche Aufgaben hat ein Kescher ? ',
+      q: 'Welche Aufgaben hat ein Kescher?',
       a: {
         a: 'Ein Kescher ist nur für Raubfische zu verwenden.',
         b: 'Mit einem Kescher sollen lediglich geschonte Fische gelandet werden.',
@@ -189,7 +189,7 @@ export default {
       c: 'c'
     }, {
       id: 20,
-      q: 'Sie wollen eine größere Menge Barsche und Schleien transportieren.Auf welche Dinge müssen Sie achten? ',
+      q: 'Sie wollen eine größere Menge Barsche und Schleien transportieren. Auf welche Dinge müssen Sie achten?',
       a: {
         a: 'Separate Transportbehältnisse inklusive Sauerstoffversorgung für Schleien und Barsche, da die Kammschuppen der Barsche die Schleimhaut der Schleien verletzen würden.',
         b: 'Das Verhältnis von Schleien zu Barschen muss mindestens 1:2 betragen.',
@@ -207,7 +207,7 @@ export default {
       c: 'c'
     }, {
       id: 22,
-      q: 'Welcher Leitsatz dient als Grundeinstellung fürjeden Fischer?',
+      q: 'Welcher Leitsatz dient als Grundeinstellung für jeden Fischer?',
       a: {
         a: 'Keinem Tier sollte ohne Grund Schmerzen und Leid zugefügt werden.',
         b: 'Fische kann man gar nicht genug fangen.',
@@ -289,7 +289,7 @@ export default {
       id: 30,
       q: 'Welche der folgenden Aussagen ist richtig?',
       a: {
-        a: 'Das Fliegenfischen mit Kunstfliege soll Wasserinsekten imitieren, die auf der Wasseroberfiäche „tanzen“, um Eier darin abzulegen.',
+        a: 'Das Fliegenfischen mit Kunstfliege soll Wasserinsekten imitieren, die auf der Wasseroberfläche „tanzen“, um Eier darin abzulegen.',
         b: 'Das Fliegenfischen ist nur mit Kunstfliege erlaubt.',
         c: 'Das Befischen von Äschen ist nur mit einer Fliegenrute ab der Klasse 6 erlaubt.'
       },
@@ -310,7 +310,7 @@ export default {
       q: 'Was versteht man unter „Anflugnahrung"?',
       a: {
         a: 'Fischnährtiere, die über Wasservögel in Gewässer gelangen und damit Fischen als Nahrung dienen.',
-        b: 'Tiere und Insekten, die auf die Wasseroberfiäche stürzen, und Fischen somit als Nahrungsquelle zur Verfügung stehen.',
+        b: 'Tiere und Insekten, die auf die Wasseroberfläche stürzen, und Fischen somit als Nahrungsquelle zur Verfügung stehen.',
         c: 'Kleine Wasservögel, die Raubfischen wie Hecht und Wels als Nahrung dienen.'
       },
       c: 'b'
@@ -320,7 +320,7 @@ export default {
       q: 'Sie fangen einen Fisch und wollen überprüfen, ob dieser aktuell geschont ist und ob er der Mindestfanglänge entspricht. Worauf müssen Sie besonders achten?',
       a: {
         a: 'Es gelten immer die Mindestfanglängen und Schonzeiten laut Verordnung der Steiermärkischen Landesregierung. Änderungen sind in keinem Fall zulässig.',
-        b: 'Der Fischereiberechtigte kann die Mindestfanglängen und Schonzeiten laut Verordnung der Steiermärksichen Landesregierung verschärfen. In diesem Falle sind die geltenden Längen und Maße der Fischereiordnung des Erlaubnisscheines zu entnehmen',
+        b: 'Der Fischereiberechtigte kann die Mindestfanglängen und Schonzeiten laut Verordnung der Steiermärkischen Landesregierung verschärfen. In diesem Falle sind die geltenden Längen und Maße der Fischereiordnung des Erlaubnisscheines zu entnehmen',
         c: 'Es gelten Mindestfanglängen und Schonzeiten nur für die Fischarten, die auf der Hinterseite der Fischerkarte vermerkt sind.'
       },
       c: 'b'
@@ -370,7 +370,7 @@ export default {
       q: 'Warum wird ein Stahlvorfach verwendet?',
       a: {
         a: 'Um zu verhindern, dass Friedfische den Köder annehmen.',
-        b: 'Um zu verhindern, dass große Raubfische mit ihren Zähnen die Hauptschnur im Brill durchbeißen.',
+        b: 'Um zu verhindern, dass große Raubfische mit ihren Zähnen die Hauptschnur im Drill durchbeißen.',
         c: 'Um den Köder vor Raubfischen zu schützen.'
       },
       c: 'b'
@@ -379,7 +379,7 @@ export default {
       id: 39,
       q: 'Welche grundlegende Idee wird beim Spinnfischen verfolgt?',
       a: {
-        a: 'Die Imitation eines kranken oder schwachen Fisches bzw. Wasserfieres.',
+        a: 'Die Imitation eines kranken oder schwachen Fisches bzw. Wassertieres.',
         b: 'Das Aufscheuchen von Futterfischen für Raubfische.',
         c: 'Das Aufscheuchen von Raubfischen‚ um sie besser beangeln zu können.'
       },
@@ -467,9 +467,9 @@ export default {
     },
     {
       id: 48,
-      q: 'KEINE AHNUNG: Welche der folgenden Aussagen ist falsch?',
+      q: 'Welche der folgenden Aussagen ist falsch?',
       a: {
-        a: 'Die Milchner von Cypriniden bekommen in der Laichzeit meistens einen Laichausschlag am Kopf, mit denen sie die Rogner zur Eiabgabe stimuliereri.',
+        a: 'Die Milchner von Cypriniden bekommen in der Laichzeit meistens einen Laichausschlag am Kopf, mit denen sie die Rogner zur Eiabgabe stimulieren.',
         b: 'Bei einigen Salmonidenarten bekommen die Milchner während der Laichzeit nicht nur einen Laichhaken, sondern auch eine charakteristische Laichfärbung.',
         c: 'Zandermilchner laichen mit den Rognern vorwiegend im Freiwasser, da die Eier zur Befruchtung einen hohen Sauerstoffgehalt im Wasser benötigen.'
       },
@@ -576,9 +576,9 @@ export default {
       q: 'Die folgende Abbildung zeigt eine Montage fuer das Feederangeln. Welche Aufgabe hat das angebrachte Vorfach zwischen dem Wirbel und dem Haken?',
       img: 'equipVorfangAngel.png',
       a: {
-        a: 'Der Vorfach verleith der Angelschnur mehr Elastizitaet',
-        b: 'Der Vorfach verhindert beim Abreissen der Schnur, dass der Futterkorb und die restliche Mongate verloren gehen.',
-        c: 'Der Vorfach dient dazu, den Fisch im Dirll nicht zu sehr zu belasten'
+        a: 'Der Vorfach verleiht der Angelschnur mehr Elastizitaet',
+        b: 'Der Vorfach verhindert beim Abreissen der Schnur, dass der Futterkorb und die restliche Montage verloren gehen.',
+        c: 'Der Vorfach dient dazu, den Fisch im Drill nicht zu sehr zu belasten'
       },
       c: 'b'
     },
