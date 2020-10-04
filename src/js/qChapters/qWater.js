@@ -7,7 +7,7 @@ export default {
       q: 'Welche der folgenden Aussagen betreffend der Leitfischregion "Brachsenregion" ist richtig?',
       a: {
         'a': 'In der Brachsenregion herrscht langsam fliessendes Wasser mit geringem Sauerstoffgehalt und hohem Naehstoffgehalt vor.',
-        'b': 'Die Brachsenregion chrakterisisert sich dadurch, dass das Fliessgewaesser eine hohe Stroemungsgeschwindigkeit mit hohem Sauerstoffgehalt aufweist.',
+        'b': 'Die Brachsenregion charkterisiert sich dadurch, dass das Fliessgewaesser eine hohe Stroemungsgeschwindigkeit mit hohem Sauerstoffgehalt aufweist.',
         'c': 'In der Brachsenregion leben vorwiegend Forellen und Koppen'
       },
       c: 'a'
@@ -25,7 +25,7 @@ export default {
       q: 'Die Forellenregion ist Lebensraum für Elritzen, Kappen, Forellen und teilweise Äschen. Welche der folgenden Aussagen diesbezüglich ist richtig?',
       a: {
         a: 'In der Forellenregion sind vor allem Barben und Nasen aufgrund der ausgeprägten Ufervegetation zu finden.',
-        b: 'Bäche und Flüsse in der Forellenregion charakterisieren sich durch schnellfiießendes, kühles und sauerstoffreiches Wasser.',
+        b: 'Bäche und Flüsse in der Forellenregion charakterisieren sich durch schnellfließendes, kühles und sauerstoffreiches Wasser.',
         c: 'Die Forellenregion charakterisiert sich durch schnellfließendes, aber sehr nährstoffreiches Wasser.'
       },
       c: 'b'
@@ -33,8 +33,8 @@ export default {
       id: 4,
       q: 'Karpfen, Rotfedern, Rotaugen, Karauschen und ähnliche Cypriniden leben vor allem in...',
       a: {
-        a: 'langsam fiießenden, stehenden, warmen und nährstoffreichen Gewässern.',
-        b: 'schnellfiießenden, kalten und beschatteten Gewässern an der Gewässeroberfläche.',
+        a: 'langsam fließenden, stehenden, warmen und nährstoffreichen Gewässern.',
+        b: 'schnellfließenden, kalten und beschatteten Gewässern an der Gewässeroberfläche.',
         c: 'nährstoffarmen Gewässern der Obersteiermark.'
       },
       c: 'a'
@@ -98,7 +98,7 @@ export default {
       a: {
         a: 'Der Bau von sogenannten Fischaufstiegshilfen, speziell bei Kraftwerken.',
         b: 'Zur Laichzeit werden Elektrobefischungen durchgeführt und die Laichfische werden per Transport zu ihren Laichplätzen verbracht.',
-        c: 'Zur Laichzeit werden die Schleusen der Kraftwerke in Intervallen geöffnet und gleichzeitig die Stauräume gespült, urn Fischen das Überwinden der Hindernisse zu er- möglichen.'
+        c: 'Zur Laichzeit werden die Schleusen der Kraftwerke in Intervallen geöffnet und gleichzeitig die Stauräume gespült, um Fischen das Überwinden der Hindernisse zu ermöglichen.'
       },
       c: 'a'
     }, {
@@ -186,7 +186,7 @@ export default {
       id: 21,
       q: 'Was wird unter dem Begriff „Neobiota" im Kontext der „Invasive Arten Verordnung" verstanden?',
       a: {
-        a: 'Generell alle Tier— und Pflanzenarten ‚die nach 1492 n. Chr. durch den Menschen verbracht wurden.',
+        a: 'Generell alle Tier— und Pflanzenarten‚ die nach 1492 n. Chr. durch den Menschen verbracht wurden.',
         b: 'Pflanzen und Tiere, die nach 1492 n. Chr. durch den Menschen in fremde Ökosysteme eingebracht wurden, sich trotz aller Gegenmaßnahmen weiter ausbreiten und heimische Arten verdrängen.',
         c: 'Fischarten, die ursprünglich in der Steiermark heimisch waren.'
       },

@@ -288,7 +288,7 @@ export default {
       a: {
         a: 'Bachforellen leben nicht im gleichen Habitat wie Regenbogenforellen und können somit nur schwer verwechselt werden.',
         b: 'Bachforellen besitzen eine wesentlich größere Fettflosse als Regenbogenforellen.',
-        c: 'Regenbogenforelien besitzen in der Regel eine rötlich bis rosa schimmernde Linie entlang der Seitenlinie und besitzen im Gegensatz zur Bachforelle keine rot umrahmten Punkte.'
+        c: 'Regenbogenforellen besitzen in der Regel eine rötlich bis rosa schimmernde Linie entlang der Seitenlinie und besitzen im Gegensatz zur Bachforelle keine rot umrahmten Punkte.'
       },
       c: 'c'
     }, {
@@ -296,13 +296,13 @@ export default {
       q: 'Welche der folgenden Aussagen ist richtig?',
       a: {
         a: 'Das Alter von Fischen kann generell über die Körpergröße bestimmt werden.',
-        b: 'Eine Altersbestimmung erfolgt am besten über das Zählen der ]ahresringe auf den Schuppen oder über einen Querschnitt des Gehörknöchelchens.',
+        b: 'Eine Altersbestimmung erfolgt am besten über das Zählen der Jahresringe auf den Schuppen oder über einen Querschnitt des Gehörknöchelchens.',
         c: 'Das Alter eines Fisches wird in Überlebten Wintern gezählt.'
       },
       c: 'b'
     }, {
       id: 29,
-      q: 'Wie unterscheiden Sie junge [juvenile) Elritzen von Regenbogenforellen?',
+      q: 'Wie unterscheiden Sie junge (juvenile) Elritzen von Regenbogenforellen?',
       a: {
         a: 'Junge Elritzen haben eine größere Rückenflosse als Regenbogenforellen.',
         b: 'Regenbogenforellen besitzen im Gegensatz zur Elritze eine Fettflosse.',
@@ -315,7 +315,7 @@ export default {
       a: {
         a: 'Karauschen besitzen im Gegensatz zum Karpfen keine Barteln.',
         b: 'Äschen und Hechte gehören der Fischfamilie der Perciden (Barschartigen) an.',
-        c: 'Rotfedern können in Gewässern mit einer Wassertemperatur von mehr als 12,5°C nicht übedeben.'
+        c: 'Rotfedern können in Gewässern mit einer Wassertemperatur von mehr als 12,5°C nicht überleben.'
       },
       c: 'a'
     }, {
@@ -341,7 +341,7 @@ export default {
       q: 'Wie gewährleisten Fische im Normalfall die Sauerstoffaufnahme aus dem Wasser?',
       a: {
         a: 'Über die Kiemenbögen und Kiemenplättchen der Kiemen.',
-        b: 'Durch die Aufnahme von Luft über die Notatmung an der Wasserober?äche.',
+        b: 'Durch die Aufnahme von Luft über die Notatmung an der Wasseroberfläche.',
         c: 'Sauerstoff wird primär über das Seitenlinienorgan aus dem Wasser aufgenommen.'
       },
       c: 'a'
@@ -412,9 +412,9 @@ export default {
       id: 41,
       q: 'Kreuzen Sie die richtige Aussage an!',
       a: {
-        a: 'Milch und Regen werden von Milchner und Rogner über dem passenden Untergrund abgegeben. Darau?1in erfolgt die Befruchtung des Rogens. Je nach Fischart und Temperatur schlüpfen nach einigen Tagen bzw. Wochen die ersten Fischlarven. Diese ernähren sich die ersten Tage von ihrem Dottersack und gehen danach auf die Nahrungssuche nach p?anzlichem und tierischem Plankton.',
+        a: 'Milch und Regen werden von Milchner und Rogner über dem passenden Untergrund abgegeben. Daraufhin erfolgt die Befruchtung des Rogens. Je nach Fischart und Temperatur schlüpfen nach einigen Tagen bzw. Wochen die ersten Fischlarven. Diese ernähren sich die ersten Tage von ihrem Dottersack und gehen danach auf die Nahrungssuche nach pflanzlichen und tierischem Plankton.',
         b: 'Der Rogen wird von den Milchnern einige Zeit vor der Abgabe der Milch im Sediment eingegraben und erst dann befruchtet. Danach dauert es einige Wochen bis die jungen Fische schlüpfen und zu fressen beginnen.',
-        c: 'Zum Ablaichen finden sich bei allen Fischarten immerje ein Milchner und ein Rogner zusammen. Danach werden Milch und Regen abgegeben und die Befruchtung ?ndet statt. Je nach Fischart und Temperatur schlüpfen nach einigen Tagen bzw. Wochen die ersten Fischlarven. Diese ernähren sich die ersten Tage von ihrem Dottersack und gehen danach auf die Nahrungssuche nach p?anzlichem und tierischem Plankton.'
+        c: 'Zum Ablaichen finden sich bei allen Fischarten immer je ein Milchner und ein Rogner zusammen. Danach werden Milch und Rogen abgegeben und die Befruchtung findet statt. Je nach Fischart und Temperatur schlüpfen nach einigen Tagen bzw. Wochen die ersten Fischlarven. Diese ernähren sich die ersten Tage von ihrem Dottersack und gehen danach auf die Nahrungssuche nach pflanzlichen und tierischem Plankton.'
       },
       c: 'a'
     }, {
@@ -458,7 +458,7 @@ export default {
       q: 'Welche Aussage ist falsch?',
       a: {
         a: 'Das Wachstum des Fisches dauert sein ganzes Leben an.',
-        b: 'Das Alter des Fisches kann anhand der ]ahresringe auf den Flossen abgelesen werden.',
+        b: 'Das Alter des Fisches kann anhand der Jahresringe auf den Flossen abgelesen werden.',
         c: 'Druckwellen im Wasser werden über das Seitenlinienorgan registriert.'
       },
       c: 'b'
@@ -530,13 +530,13 @@ export default {
       q: 'Welche der folgenden Antworten ist korrekt?',
       a: {
         a: 'Bachforellen und Huchen sind autochthone Fischarten.',
-        b: 'Aalrutten laichen im Herbst an Stellen mit abgestorbenem P?anzenbewuchs.',
+        b: 'Aalrutten laichen im Herbst an Stellen mit abgestorbenem Pflanzenbewuchs.',
         c: 'Schleien bevorzugen klare, kalte und sauerstoffreiche Habitate.'
       },
       c: 'a'
     }, {
       id: 55,
-      q: 'KEINE AHNUNG: Welche der folgenden Aussagen ist falsch?',
+      q: 'Welche der folgenden Aussagen ist falsch?',
       a: {
         a: 'Neunaugen sind der Ordnung der Rundmäuler zuzuordnen.',
         b: 'Bachflohkrebse stellen eine wichtige Nahrungsquelle für Kleinfischarten dar.',
@@ -556,17 +556,17 @@ export default {
       id: 57,
       q: 'Welche Charakteristika besitzt die Fischfamilie der Barschartigen (Perciden)?',
       a: {
-        a: 'Kammschuppen, keine Barteln, keine Fettfiosse, erste Rückenflosse mit Stachelstrahlen, meist kehlständige Bauch?ossen.',
+        a: 'Kammschuppen, keine Barteln, keine Fettflosse, erste Rückenflosse mit Stachelstrahlen, meist kehlständige Bauchflossen.',
         b: 'Kammschuppen, Barteln, keine Fettflosse, zweite Rückenflosse mit Stachelstrahlen.',
         c: 'Rundschuppen, Rückenflossen mit Stachelstrahlen, kehlständige Bauchflossen.'
       },
       c: 'a'
     }, {
       id: 58,
-      q: 'Durch welche der folgenden Merkmale zeichnen sich Salmoniden aus ?',
+      q: 'Durch welche der folgenden Merkmale zeichnen sich Salmoniden aus?',
       a: {
         a: 'Rundschuppen, keine Fettflosse, Rückenflosse mit Stachelstrahlen.',
-        b: 'Rundschuppen, Fettfiosse, hochrückiger Körper.',
+        b: 'Rundschuppen, Fettflosse, hochrückiger Körper.',
         c: 'Rundschuppen, Fettflosse, stromlinienförmiger Körper.'
       },
       c: 'c'

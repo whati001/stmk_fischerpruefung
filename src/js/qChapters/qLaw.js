@@ -83,7 +83,7 @@ export default {
   }
     , {
     id: 9,
-    q: 'Welche der folgenden Köder dürfen Sie verwenden? .',
+    q: 'Welche der folgenden Köder dürfen Sie verwenden?.',
     a: {
       a: 'Lebende Frösche',
       b: 'Lebende Rotaugen',
@@ -105,7 +105,7 @@ export default {
     id: 11,
     q: 'Können bereits erteilte Fischerkarten oder Scheine wieder eingezogen werden?',
     a: {
-      a: 'Ja, wenn der Fischerkarteninhaber gegen Fischereiliche Schutzbestimmungen verstoßen hat.',
+      a: 'Ja, wenn der Fischerkarteninhaber gegen fischereiliche Schutzbestimmungen verstoßen hat.',
       b: 'Nein, selbst wenn der Fischerkarteninhaber gegen fischereiliche Schutzbestimmungen verstoßen hat.',
       c: 'Nein, auf keinen Fall.'
     },
@@ -113,7 +113,7 @@ export default {
   }
     , {
     id: 12,
-    q: 'Fangmethoden wie Schlingen, Betäubungsmittei, Gifte, gentechnisch veränderte Köder, lebende Wirbeltiere und Fischstechen sind',
+    q: 'Fangmethoden wie Schlingen, Betäubungsmittel, Gifte, gentechnisch veränderte Köder, lebende Wirbeltiere und Fischstechen sind',
     a: {
       a: 'ausnahmslos verboten.',
       b: 'an und von der Steiermärkischen Landesregierung zu bewilligende Ausnahmen gebunden.',
