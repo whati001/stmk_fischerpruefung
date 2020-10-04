@@ -11,20 +11,29 @@ import qns from './qnsChapters';
 /**
  * @class QLoader
  * @description Load and process everything related to questions
- * @param {*} qs - questions to manage
+ * @param {*} qns - questions to manage
  */
 class QLoader {
-  constructor(qs) {
+  /**
+   * @description ctor for {QLoader} class
+   * @param {*} qns questions to work with
+   */
+  constructor(qns) {
     this.action = undefined;
     this.label = undefined;
     this.readOnly = undefined;
-    this.qs = this.readQs(qs);
-    this.qsAvailable = (this.qs && this.qs.length > 0);
+    this.qns = this.readQns(qns);
+    this.qnsAvailable = (this.qns && this.qns.length > 0);
   }
 
-  readQs(qs) {
-    if (qs && qs.length > 0) {
-      return qs.map(cat => {
+  /**
+   * Load questions into member variable
+   * sort the questions by id property
+   * @param {*} qns 
+   */
+  readQns(qns) {
+    if (qns && qns.length > 0) {
+      return qns.map(cat => {
         cat.qs = cat.qs.sort((a, b) => (a.id > b.id) ? 1 : -1);
         return cat;
       });
@@ -32,26 +41,41 @@ class QLoader {
     return;
   }
 
+  /**
+   * Shuffel all quesions
+   */
   shuffelQns() {
-    this.qs = this.qs.map(cat => {
+    this.qns = this.qns.map(cat => {
       cat.qs = utils.shuffleArray(cat.qs);
       return cat;
     });
   }
 
+  /**
+   * Slice questions up to size amount
+   * @param {*} size 
+   */
   sliceQns(size) {
-    this.qs = this.qs.map(cat => {
+    this.qns = this.qns.map(cat => {
       cat.qs = cat.qs.slice(0, size);
       return cat;
     });
   }
 
+  /**
+   * Little helper methode to init object by action values
+   * @param {*} action 
+   */
   storeActionValues(action) {
     this.action = action.QUERY || 'notFound';
     this.label = action.LABEL || 'notFound';
     this.readOnly = action.READ_ONLY;
   }
 
+  /**
+   * Initialize class for action
+   * @param {*} action 
+   */
   initAction(action) {
     switch (action) {
       case cValue.ACTION.ACTION.TRAIN.QUERY:
@@ -84,16 +108,24 @@ class QLoader {
     }
   }
 
+  /**
+   * Load action, this methode needs to run after the {initAction} method
+   */
   loadAction() {
     if (!this.action) {
       console.warn('Please initialize an action first by calling qManager.initAction() first');
       return;
     }
-    console.log(this);
+
     this.injectAllQuestions(cValue.DOM_ID.QNS_CONTAINER, this.readOnly);
   }
 
-  injectMissingQsInfo(domContainer) {
+
+  /**
+   * Inject info text that no quetions go loaded to {QManager} class during initialization
+   * @param {*} domContainer 
+   */
+  injectMissingQnsInfo(domContainer) {
     console.warn('Please define some questions in questions.js');
     const { col } = utils.injectNewRowCol(domContainer, { 'col': 'infoText' });
     const infoText = document.createElement('p');
@@ -101,7 +133,12 @@ class QLoader {
     col.appendChild(infoText);
   }
 
-  injectQCatCard(domContainer, qCat) {
+  /**
+   * Inject new question category card
+   * @param {*} domContainer 
+   * @param {*} qCat 
+   */
+  injectQnsCatCard(domContainer, qCat) {
     const card = utils.newDOMElement('div', 'card category-card');
     domContainer.appendChild(card);
 
@@ -112,7 +149,14 @@ class QLoader {
     return card;
   }
 
-  injectQCard(domContainer, q, cat, readOnly = false) {
+  /**
+   * Inject new question card with answers
+   * @param {*} domContainer 
+   * @param {*} q 
+   * @param {*} cat 
+   * @param {*} readOnly 
+   */
+  injectQnsCard(domContainer, q, cat, readOnly = false) {
     const card = utils.newDOMElement('div', 'card category-question-card');
     domContainer.appendChild(card);
     if (q.img) {
@@ -141,6 +185,11 @@ class QLoader {
     return card;
   }
 
+  /**
+   * Correct and highlight user result
+   * @param {*} card 
+   * @param {*} q 
+   */
   markCorrectAnswer(card, q) {
     const answer = card.querySelector(`input.form-check-input[value=${q.c}]`);
     if (answer) {
@@ -150,25 +199,30 @@ class QLoader {
     }
   }
 
+  /**
+   * Inject all questions from {QManager} class into dom container
+   * @param {*} container 
+   * @param {*} readOnly 
+   */
   injectAllQuestions(container, readOnly = true) {
     if (!container) {
       console.warn('Please provide an valid DOM container for injecting questions');
       return;
     }
     const domContainer = utils.getDOMElement(container);
-    if (!this.qsAvailable) {
-      this.injectMissingQsInfo(domContainer);
+    if (!this.qnsAvailable) {
+      this.injectMissingQnsInfo(domContainer);
       return;
     }
 
-    this.qs.forEach(cat => {
+    this.qns.forEach(cat => {
       const row = utils.injectNewRow(domContainer);
       const col = utils.injectNewCol(row);
-      this.injectQCatCard(col, cat);
+      this.injectQnsCatCard(col, cat);
       cat.qs.forEach(q => {
         const row = utils.injectNewRow(domContainer);
         const col = utils.injectNewCol(row);
-        const card = this.injectQCard(col, q, cat, readOnly);
+        const card = this.injectQnsCard(col, q, cat, readOnly);
         if (readOnly) this.markCorrectAnswer(card, q);
       });
     });

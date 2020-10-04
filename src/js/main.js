@@ -10,12 +10,12 @@ import cValue from './const';
 import qManager from './qManager';
 
 /** 
- * Executed after page is ready
+ * Initialize qManager and load selected action
  */
 window.onload = function() {
   const action = utils.getUrlParamsValue(cValue.ACTION.QUERY_NAME);
 
-  const qLoader = new qManager(qns);
-  qLoader.initAction(action);
-  qLoader.loadAction();
+  const app = new qManager(qns);
+  app.initAction(action);
+  app.loadAction();
 };
