@@ -1,3 +1,9 @@
+/**
+ * @file qTradition.js
+ * @description all questions about tradition
+ * @author andreas.karner@student.tugraz.at
+ */
+
 export default {
   id: 3,
   name: 'Tierschutz, fischereiliche Praxis, Behandlung der gefangenen Tiere',

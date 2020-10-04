@@ -40,6 +40,19 @@ const getDOMElement = (elm) => {
 };
 
 /**
+* Update innerText attribute from elm
+* keep vDom unchanged if elm not found
+* @param {*} param 
+* @param {*} href 
+*/
+const updateInnerText = (elm, text) => {
+  const dom = getDOMElement(elm);
+  if (dom && text) {
+    dom.innerText = text;
+  }
+};
+
+/**
  * Return a new DOMNode from given type and set classes
  * @param {*} type 
  * @param {*} classes 
@@ -160,6 +173,7 @@ const shuffleArray = (array) => {
 export default {
   getUrlParamsValue,
   getDOMElement,
+  updateInnerText,
   newDOMElement,
   injectNewRow,
   injectNewCol,

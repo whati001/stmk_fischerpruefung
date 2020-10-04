@@ -1,3 +1,9 @@
+/**
+ * @file qWaterHabitat
+ * @description all questions about water culture and habitat
+ * @author andreas.karner@student.tugraz.at
+ */
+
 export default {
   id: 2,
   name: 'Gewaesserkunde und Biotopkunde',

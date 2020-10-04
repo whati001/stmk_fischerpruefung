@@ -1,3 +1,9 @@
+/**
+ * @file qLaw
+ * @description all questions about fishing law
+ * @author andreas.karner@student.tugraz.at
+ */
+
 export default {
   id: 4,
   name: 'Rechtskunde',

@@ -1,11 +1,23 @@
+/**
+ * @file qManager.js
+ * @description responsible class for handling all question
+ *                related stuff
+ * @author andreas.karner@student.tugraz.at
+ */
 import utils from './utils';
+import cValue from './const';
+import qns from './qnsChapters';
 
 /**
- * QLoader - Question Loader
- * Load and process everything related to questions
+ * @class QLoader
+ * @description Load and process everything related to questions
+ * @param {*} qs - questions to manage
  */
 class QLoader {
   constructor(qs) {
+    this.action = undefined;
+    this.label = undefined;
+    this.readOnly = undefined;
     this.qs = this.readQs(qs);
     this.qsAvailable = (this.qs && this.qs.length > 0);
   }
@@ -20,18 +32,65 @@ class QLoader {
     return;
   }
 
-  shuffelQs() {
+  shuffelQns() {
     this.qs = this.qs.map(cat => {
       cat.qs = utils.shuffleArray(cat.qs);
       return cat;
     });
   }
 
-  sliceQs(size) {
+  sliceQns(size) {
     this.qs = this.qs.map(cat => {
       cat.qs = cat.qs.slice(0, size);
       return cat;
     });
+  }
+
+  storeActionValues(action) {
+    this.action = action.QUERY || 'notFound';
+    this.label = action.LABEL || 'notFound';
+    this.readOnly = action.READ_ONLY;
+  }
+
+  initAction(action) {
+    switch (action) {
+      case cValue.ACTION.ACTION.TRAIN.QUERY:
+        this.storeActionValues(cValue.ACTION.ACTION.TRAIN);
+        this.shuffelQns();
+        break;
+
+      case cValue.ACTION.ACTION.EXAM.QUERY:
+        this.storeActionValues(cValue.ACTION.ACTION.EXAM);
+        this.shuffelQns();
+        this.sliceQns(10);
+        break;
+
+      case cValue.ACTION.ACTION.QNS.QUERY: {
+        this.storeActionValues(cValue.ACTION.ACTION.QNS);
+        utils.getDOMElement(cValue.DOM_ID.VALIDATE_INPUT).style.display = 'none';
+        break;
+
+      }
+      default: {
+        console.warn('Unknown action passed, let\'s we will redirect you to the home page');
+        window.location.href = new URL(window.location.href).origin;
+        return;
+      }
+    }
+
+    utils.updateInnerText(cValue.DOM_ID.QUIZ_TYPE, this.label);
+    if (!this.readOnly) {
+      utils.getDOMElement(cValue.DOM_ID.VALIDATE_INPUT).onclick = validateUserInput;
+    }
+  }
+
+  loadAction() {
+    if (!this.action) {
+      console.warn('Please initialize an action first by calling qManager.initAction() first');
+      return;
+    }
+    console.log(this);
+    this.injectAllQuestions(cValue.DOM_ID.QNS_CONTAINER, this.readOnly);
   }
 
   injectMissingQsInfo(domContainer) {
@@ -116,5 +175,28 @@ class QLoader {
   }
 }
 
+/**
+ * Check all questions if the user answerd correctly
+ */
+const validateUserInput = () => {
+  Array.from(document.getElementsByClassName('category-question-card')).forEach(uq => {
+    const ids = uq.querySelector('input').getAttribute('name');
+    const catId = parseInt(ids.split('-')[0]);
+    const qId = parseInt(ids.split('-')[1]);
+    const correct = qns.filter(cat => cat.id === catId)[0].qs.filter(q => q.id === qId)[0].c;
+
+    const userSelected = uq.querySelector('input:checked');
+    if (userSelected) {
+      if (userSelected.getAttribute('value') !== correct) {
+        utils.getParentNode(userSelected, 'li').classList.add('wrongAnswer');
+      }
+    } else {
+      uq.style.color = 'red';
+    }
+    const correctInput = uq.querySelector(`input[value=${correct}`);
+    //correctInput.checked = true;
+    utils.getParentNode(correctInput, 'li').classList.add('correctAnswer');
+  });
+};
 
 export default QLoader;

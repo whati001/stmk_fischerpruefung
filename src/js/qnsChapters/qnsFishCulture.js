@@ -1,3 +1,9 @@
+/**
+ * @file qFishCulture
+ * @description all questions about fish and there culture 
+ * @author andreas.karner@student.tugraz.at
+ */
+
 export default {
   id: 1,
   name: 'Fischkunde- und hege',

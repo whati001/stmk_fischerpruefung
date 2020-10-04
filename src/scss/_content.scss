@@ -4,31 +4,31 @@
   width: 100%;
 }
 
-#qsContainer .infoText {
+#qnsContainer .infoText {
   margin: 1rem 0rem;
   color: red;
   font-weight: bold;
 }
 
-#qsContainer .card {
+#qnsContainer .card {
   margin: 1rem auto;
   max-width: 600px;
 }
 
-#qsContainer .card .list-group {
+#qnsContainer .card .list-group {
   text-align: left;
 }
 
-#qsContainer .correctAnswer {
+#qnsContainer .correctAnswer {
   background-color: lightgreen;
   font-weight: bold;
 }
 
-#qsContainer .wrongAnswer {
+#qnsContainer .wrongAnswer {
   background-color: lightcoral;
 }
 
 
-#qsContainer .category-card {
+#qnsContainer .category-card {
   background-color: $primaryBackground;
 }
