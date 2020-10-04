@@ -15,7 +15,7 @@ export default {
       },
       EXAM: {
         QUERY: 'exam',
-        LABEL: 'Pruefung',
+        LABEL: 'Prüfung',
         READ_ONLY: false
       },
       QNS: {

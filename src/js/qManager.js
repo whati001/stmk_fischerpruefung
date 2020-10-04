@@ -6,14 +6,13 @@
  */
 import utils from './utils';
 import cValue from './const';
-import qns from './qnsChapters';
 
 /**
  * @class QLoader
  * @description Load and process everything related to questions
  * @param {*} qns - questions to manage
  */
-class QLoader {
+class QManager {
   /**
    * @description ctor for {QLoader} class
    * @param {*} qns questions to work with
@@ -24,6 +23,44 @@ class QLoader {
     this.readOnly = undefined;
     this.qns = this.readQns(qns);
     this.qnsAvailable = (this.qns && this.qns.length > 0);
+  }
+
+  /**
+   * Validate all correct answers
+   */
+  static validateUserInput() {
+    Array.from(document.getElementsByClassName('category-question-card')).forEach(qnsCard => {
+      const ca = qnsCard.getAttribute('qnsanswer');
+      const userSelected = qnsCard.querySelector('input:checked');
+      if (userSelected) {
+        if (userSelected.getAttribute('value') !== ca) {
+          utils.getParentNode(userSelected, 'li').classList.add('wrongAnswer');
+        }
+      } else {
+        qnsCard.style.color = 'red';
+      }
+      QManager.markCorrectAnswer(qnsCard, false);
+    });
+  }
+
+  /**
+   * Correct and highlight correct answer
+   * @param {*} card 
+   * @param {*} q 
+   */
+  static markCorrectAnswer(card, tickAnswer = true) {
+    if (!card) {
+      console.warn('Please pass a proper card dom element where to mark correct answer');
+    }
+    const ca = card.getAttribute('qnsanswer') || '';
+    Array.from(card.querySelectorAll('input')).forEach(a => {
+      a.disabled = true;
+      if (a.value === ca) {
+        if (tickAnswer) a.checked = true;
+        const parent = utils.getParentNode(a, 'li');
+        if (parent) parent.classList.add('correctAnswer');
+      }
+    });
   }
 
   /**
@@ -104,7 +141,7 @@ class QLoader {
 
     utils.updateInnerText(cValue.DOM_ID.QUIZ_TYPE, this.label);
     if (!this.readOnly) {
-      utils.getDOMElement(cValue.DOM_ID.VALIDATE_INPUT).onclick = validateUserInput;
+      utils.getDOMElement(cValue.DOM_ID.VALIDATE_INPUT).onclick = QManager.validateUserInput;
     }
   }
 
@@ -138,7 +175,7 @@ class QLoader {
    * @param {*} domContainer 
    * @param {*} qCat 
    */
-  injectQnsCatCard(domContainer, qCat) {
+  injectQnsCategoryCard(domContainer, qCat) {
     const card = utils.newDOMElement('div', 'card category-card');
     domContainer.appendChild(card);
 
@@ -156,47 +193,33 @@ class QLoader {
    * @param {*} cat 
    * @param {*} readOnly 
    */
-  injectQnsCard(domContainer, q, cat, readOnly = false) {
-    const card = utils.newDOMElement('div', 'card category-question-card');
-    domContainer.appendChild(card);
+  injectQnsCard(domContainer, q, cat) {
+    const qnsId = `${cat.id}-${q.id}`;
+    const qnsCard = utils.newDOMElement('div', 'card category-question-card', { 'qnsid': qnsId, 'qnsanswer': q.c });
+    domContainer.appendChild(qnsCard);
     if (q.img) {
       const img = utils.newDOMElement('img', 'card-img-top', { 'src': `images/${q.img}` });
-      card.appendChild(img);
+      qnsCard.appendChild(img);
     }
 
-    const question = utils.newDOMElement('div', 'card-body');
-    card.appendChild(question);
-    question.appendChild(utils.newDOMElement('h5', 'card-title', { 'innerText': `Frage: ${q.id}` }));
-    question.appendChild(utils.newDOMElement('p', 'card-text', { 'innerText': q.q }));
+    const qnsText = utils.newDOMElement('div', 'card-body');
+    qnsCard.appendChild(qnsText);
+    qnsText.appendChild(utils.newDOMElement('h5', 'card-title', { 'innerText': `Frage: ${q.id}` }));
+    qnsText.appendChild(utils.newDOMElement('p', 'card-text', { 'innerText': q.q }));
 
     const answers = utils.newDOMElement('ul', 'list-group');
-    card.appendChild(answers);
+    qnsCard.appendChild(answers);
     Object.keys(q.a).forEach(akey => {
       const answerLi = utils.newDOMElement('li', 'list-group-item');
       answers.appendChild(answerLi);
       const answerDiv = utils.newDOMElement('div', 'form-check');
       answerLi.appendChild(answerDiv);
-      const checkbox = utils.newDOMElement('input', 'form-check-input', { 'type': 'radio', 'name': `${cat.id}-${q.id}`, 'value': akey, 'id': `${cat.id}-${q.id}-${akey}` });
+      const checkbox = utils.newDOMElement('input', 'form-check-input', { 'type': 'radio', 'name': qnsId, 'value': akey, 'id': `${qnsId}-${akey}` });
       answerDiv.appendChild(checkbox);
-      const label = utils.newDOMElement('label', 'form-check-label', { 'innerText': q.a[akey], 'for': `${cat.id}-${q.id}-${akey}` });
+      const label = utils.newDOMElement('label', 'form-check-label', { 'innerText': q.a[akey], 'for': `${qnsId}-${akey}` });
       answerDiv.appendChild(label);
-      if (readOnly) checkbox.disabled = true;
     });
-    return card;
-  }
-
-  /**
-   * Correct and highlight user result
-   * @param {*} card 
-   * @param {*} q 
-   */
-  markCorrectAnswer(card, q) {
-    const answer = card.querySelector(`input.form-check-input[value=${q.c}]`);
-    if (answer) {
-      answer.checked = true;
-      const parent = utils.getParentNode(answer, 'li');
-      if (parent) parent.classList.add('correctAnswer');
-    }
+    return qnsCard;
   }
 
   /**
@@ -218,39 +241,15 @@ class QLoader {
     this.qns.forEach(cat => {
       const row = utils.injectNewRow(domContainer);
       const col = utils.injectNewCol(row);
-      this.injectQnsCatCard(col, cat);
+      this.injectQnsCategoryCard(col, cat);
       cat.qs.forEach(q => {
         const row = utils.injectNewRow(domContainer);
         const col = utils.injectNewCol(row);
-        const card = this.injectQnsCard(col, q, cat, readOnly);
-        if (readOnly) this.markCorrectAnswer(card, q);
+        const card = this.injectQnsCard(col, q, cat);
+        if (readOnly) QManager.markCorrectAnswer(card, q);
       });
     });
   }
 }
 
-/**
- * Check all questions if the user answerd correctly
- */
-const validateUserInput = () => {
-  Array.from(document.getElementsByClassName('category-question-card')).forEach(uq => {
-    const ids = uq.querySelector('input').getAttribute('name');
-    const catId = parseInt(ids.split('-')[0]);
-    const qId = parseInt(ids.split('-')[1]);
-    const correct = qns.filter(cat => cat.id === catId)[0].qs.filter(q => q.id === qId)[0].c;
-
-    const userSelected = uq.querySelector('input:checked');
-    if (userSelected) {
-      if (userSelected.getAttribute('value') !== correct) {
-        utils.getParentNode(userSelected, 'li').classList.add('wrongAnswer');
-      }
-    } else {
-      uq.style.color = 'red';
-    }
-    const correctInput = uq.querySelector(`input[value=${correct}`);
-    //correctInput.checked = true;
-    utils.getParentNode(correctInput, 'li').classList.add('correctAnswer');
-  });
-};
-
-export default QLoader;
+export default QManager;
