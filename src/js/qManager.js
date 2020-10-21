@@ -155,6 +155,7 @@ class QManager {
     }
 
     this.injectAllQuestions(cValue.DOM_ID.QNS_CONTAINER, this.readOnly);
+    utils.doLazyLoad();
   }
 
 
@@ -198,7 +199,7 @@ class QManager {
     const qnsCard = utils.newDOMElement('div', 'card category-question-card', { 'qnsid': qnsId, 'qnsanswer': q.c });
     domContainer.appendChild(qnsCard);
     if (q.img) {
-      const img = utils.newDOMElement('img', 'card-img-top', { 'src': `images/${q.img}` });
+      const img = utils.newDOMElement('img', 'card-img-top', { 'data-lazysrc': `images/${q.img}` });
       qnsCard.appendChild(img);
     }
 

@@ -169,6 +169,18 @@ const shuffleArray = (array) => {
   return array;
 };
 
+/**
+ * Do lazy load for entire page
+ */
+const doLazyLoad = () => {
+  const elms = document.querySelectorAll('img[data-lazysrc]');
+  if (!elms) return;
+
+  Array.from(elms).forEach(elm => {
+    elm.setAttribute('src', elm.getAttribute('data-lazysrc'));
+  });
+};
+
 
 export default {
   getUrlParamsValue,
@@ -179,5 +191,6 @@ export default {
   injectNewCol,
   injectNewRowCol,
   getParentNode,
-  shuffleArray
+  shuffleArray,
+  doLazyLoad
 };
